@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H'Burguer</title>
+    <link rel="shortcut icon" href="img/logo.jpeg" type="image?x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+
+    <!-- scroll-tpo -->
+    <a href="#" class="scrolltop" id="scroll-top">
+        <i class='bx bxs-chevrons-up scroll_top_icon'></i>
+    </a>
+
+    <!-- header -->
+    <header class="header" id="header">
+    
+    <!-- nav -->
+    <nav class="nav bd-container">
+
+        <h1><a href="#home" class="logo">H'Burguer</a></h1>
+
+        <div class="nav_menu" id="nav-menu">
+
+            <ul class="nav_list">
+                <li class="nav_item"> <a href="#home" class="nav_link active-link">Home</a></li>
+                <li class="nav_item"> <a href="#sobre" class="nav_link">Sobre</a></li>
+                <li class="nav_item"> <a href="#cardapio" class="nav_link">Cardápio</a></li>
+                <li class="nav_item"> <a href="https://web.whatsapp.com/send?phone=558398102477" target="blank" class="btn">WhatsApp</a></li>
+
+            </ul>
+            
+        </div>
+
+        <div class="nav_toggle" id="nav-toggle">
+            <i class='bx bx-menu-alt-right'></i>
+        </div>
+
+    </nav>
+</header>
+                                        <!-- test -->
+                                        <section id="cart">
+                                            <h2>Carrinho de Compras</h2>
+                                            <ul id="cart-items">
+                                            
+                                            </ul>
+                                            <p id="total">Total: R$ 0,00</p>
+                                            <button onclick="checkout()">Finalizar Pedido</button>
+                                        </section>
+                                        <!-- test -->
+
+    <!-- main -->
+<main>
+    <!-- home -->
+    <section class="home" id="home">
+        <div class="home_container db-container db-grid">
+            <div class="home_data">
+                <h1 class="home_title">Bem Vindo ao <span>H'Burguer</span></h1>
+                <h2 class="home_subtitle">Qualidade e Inovação</h2>
+                <div class="home_btn">
+                    
+                    <a href="https://web.whatsapp.com/send?phone=558398102477" target="blank" class="btn">Peça pelo WhatsApp</a>
+                </div>
+            </div>
+
+            <img src="./img/hb-capa.jpg" alt="H-Burguer" class="home_img">
+        </div>
+        
+    </section>
+
+
+
+    <!-- sobre -->
+    <section class="about bg container section" id="sobre">
+        <h1 class="section-title">Sobre</h1>
+        <h2 class="section-subtitle">Um fascinado por hamburguer</h2>
+        <div class="about_container bd-container bd-grid">
+            <div class="about_chef">
+                <div class="chef">
+                    <img src="./img/chef.jfif" alt="Wellison" class="img_chef">
+                    <span>Wellison Henriques</span>
+                </div>  
+            </div>
+            <div class="about_data">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat soluta fuga quae dignissimos saepe sit vitae repellat maxime id fugit, vel aliquid ad voluptatem tempora facere placeat. Consectetur, amet blanditiis!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- cardápio -->
+    <section class="cardapio section" id="menu">
+        <h1 class="section-title">Cardápio</h1>
+        <h2 class="section-subtitle">Artesanais</h2>
+        <div class="cardapio_container bd-container bd-grid">
+            <div class="card">
+                <div class="card_img">
+                    <img src="./img/gkay.jpeg">
+                </div>
+                <div class="card_data">    
+                        <h3>GKAY</h3>
+                        <div class="card_desc">
+                            <small><br>Blend bovino de 100g,</br>
+                            cheddar, mussarela,</br> 
+                            alface, tomate,</br> 
+                            no pão de brioche, e molho da casa.</small>
+                        </div>
+                <div class="class_price">
+                    <span>R$ 14,00</span>
+                </div>
+            </div>
+            <button onclick="addToCart('Hamburguer Clássico', 14)"><a href="#cart"><i class='bx bx-cart card_cart'></i> </a></button>
+
+            <!-- <div class="item">
+                <img src="./img/gkay.jpeg" alt="Hamburguer 1">
+                <h3>GKAY</h3>
+                <p><br>Blend bovino de 100g,</br>
+                    cheddar, mussarela,</br> 
+                    alface, tomate,</br> 
+                    no pão de brioche, e molho da casa.</p>
+                <span class="price">R$ 14,00</span>
+                <button onclick="addToCart('Hamburguer Clássico', 14)">Adicionar ao Carrinho</button>
+            </div> -->
+            
+            </div>
+            
+            <div class="card">
+                <div class="card_img">
+                    <img src="./img/tirulipa.jpeg">
+                </div>
+                <div class="card_data">    
+                        <h3>TIRULIPA</h3>
+                        <div class="card_desc">
+                            <small><br>Blend bovino de 100g,</br>
+                            cheddar, mussarela,</br> 
+                            cebola caramelizada,</br> 
+                            no pão de brioche,</br> 
+                            bacon crocante e molho da casa.</small>
+                        </div>
+                <div class="class_price">
+                    <span>R$ 18,00</span>
+                    <button onclick="addToCart('Hamburguer Clássico', 18)">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+            </div>
+
+            <div class="card">
+                <div class="card_img">
+                    <img src="./img/nunes.jpeg">
+                </div>
+                <div class="card_data">    
+                        <h3>NUNES</h3>
+                        <div class="card_desc">
+                            <small><br>Dois blend bovino de 100g,</br>
+                                cheddar, mussarela,</br> 
+                                cebola caramelizada,</br> 
+                                no pão de brioche,</br> 
+                                bacon crocante e molho da casa.</small>
+                        </div>
+                <div class="class_price">
+                    <span>R$ 22,00</span>
+                </div>
+            </div>
+                <i class='bx bx-cart card_cart'></i>
+            </div>
+
+        </div>
+    </section>
+
+<!-- cardapio tradicionais -->
+
+<section class="cardapio section" id="cardapio">
+    <!-- <h1 class="section-title">Cardápio</h1> -->
+    <h2 class="section-subtitle">tradicionais</h2>
+    <div class="cardapio_container bd-container bd-grid">
+        <div class="card">
+            <div class="card_img">
+                <img src="./img/xbuguer.jfif">
+            </div>
+            <div class="card_data">    
+                    <h3>X-BURGUER</h3>
+                    <div class="card_desc">
+                        <small><br>Pão, Carne, Alface, Tomate, </br>
+                        e molho da casa.</small>
+                    </div>
+            <div class="class_price">
+                <span>R$ 6,50</span>
+            </div>
+        </div>
+        <i class='bx bx-cart card_cart'></i>
+        </div>
+        
+        <div class="card">
+            <div class="card_img">
+                <img src="./img/xegg.jfif">
+            </div>
+            <div class="card_data">    
+                    <h3>X-EGG</h3>
+                    <div class="card_desc">
+                        <small><br>Pão, Carne, Queijo, Ovo, Alface <br> Tomate, e molho da casa.</small>
+                    </div>
+            <div class="class_price">
+                <span>R$ 8,00</span>
+            </div>
+        </div>
+        <i class='bx bx-cart card_cart'></i>
+        </div>
+
+        <div class="card">
+            <div class="card_img">
+                <img src="./img/xbacon.jpeg">
+            </div>
+            <div class="card_data">    
+                    <h3>X-BACON</h3>
+                    <div class="card_desc">
+                        <small><br>Pão, Carne, Quejo, Bacon, Alface, <br> Tomate, e molho da casa.</small>
+                    </div>
+            <div class="class_price">
+                <span>R$ 12,00</span>
+            </div>
+        </div>
+            <i class='bx bx-cart card_cart'></i>
+        </div>
+
+        <div class="card">
+            <div class="card_img">
+                <img src="./img/xtudo.jpeg">
+            </div>
+            <div class="card_data">    
+                    <h3>X-TUDO</h3>
+                    <div class="card_desc">
+                        <small>Paõ, Carne, Queijo, Nuggets De <br> Frango, Ovo, Bacon, Molho Da Casa, <br> Alface e Tomate</small>
+                    </div>
+            <div class="class_price">
+                <span>R$ 15,00</span>
+            </div>
+        </div>
+            <i class='bx bx-cart card_cart'></i>
+        </div>
+
+        <div class="card">
+            <div class="card_img">
+                <img src="./img/black.jfif">
+            </div>
+            <div class="card_data">    
+                    <h3>THE BLACK</h3>
+                    <div class="card_desc">
+                        <small>Pão fofinho preminun totalmente <br> natural de carvão ativado, <br> carne industrial, maionese Heinz, <br> ovo, alface crispy e cebola <br> caramelizada.</small>
+                    </div>
+            <div class="class_price">
+                <span>R$ 16,00</span>
+            </div>
+        </div>
+            <i class='bx bx-cart card_cart'></i>
+        </div>
+
+        <div class="card">
+            <div class="card_img">
+                <img src="./img/anitta.jpg">
+            </div>
+            <div class="card_data">    
+                    <h3>ANITTA</h3>
+                    <div class="card_desc">
+                        <small>Carne industrial, molho especial <br> estilo Big Mac, alface tomate, <br> picles e no nosso pão fofinho</small>
+                    </div>
+            <div class="class_price">
+                <span>R$ 13,00</span>
+            </div>
+            </div>
+            <i class='bx bx-cart card_cart'></i>
+        </div>
+    </div>
+</section>
+
+<!-- batatas e bebidas -->
+<!-- <section class="cardapio section" id="cardapio">
+    <h1 class="section-title">Cardápio</h1> 
+    <h2 class="section-subtitle">Batatas e Bebidas</h2>
+    <div class="cardapio_container bd-container bd-grid">
+        <div class="card">
+            <div class="card_img">
+                <img src="./img/xbuguer.jfif">
+            </div>
+            <div class="card_data">    
+                    <h3>X-BURGUER</h3>
+                    <div class="card_desc">
+                       <small><br>Pão, Carne, Alface, Tomate, </br>
+                        e molho da casa.</small>
+                    </div>
+            <div class="class_price">
+                <span>R$ 6,50</span>
+            </div>
+        </div>
+        <i class='bx bx-cart card_cart'></i>
+        </div>
+        
+        <div class="card">
+            <div class="card_img">
+                <img src="./img/xegg.jfif">
+            </div>
+            <div class="card_data">    
+                    <h3>X-EGG</h3>
+                    <div class="card_desc">
+                        <small><br>Pão, Carne, Queijo, Ovo, Alface <br> Tomate, e molho da casa.</small>
+                    </div>
+            <div class="class_price">
+                <span>R$ 8,00</span>
+            </div>
+        </div>
+        <i class='bx bx-cart card_cart'></i>
+        </div>
+
+        <div class="card">
+            <div class="card_img">
+                <img src="./img/xbacon.jpeg">
+            </div>
+            <div class="card_data">    
+                    <h3>X-BACON</h3>
+                    <div class="card_desc">
+                        <small><br>Pão, Carne, Quejo, Bacon, Alface, <br> Tomate, e molho da casa.</small>
+                    </div>
+            <div class="class_price">
+                <span>R$ 12,00</span>
+            </div>
+        </div>
+            <i class='bx bx-cart card_cart'></i>
+        </div>
+
+        <div class="card">
+            <div class="card_img">
+                <img src="./img/xtudo.jpeg">
+            </div>
+            <div class="card_data">    
+                    <h3>X-TUDO</h3>
+                    <div class="card_desc">
+                        <small>Paõ, Carne, Queijo, Nuggets De <br> Frango, Ovo, Bacon, Molho Da Casa, <br> Alface e Tomate</small>
+                    </div>
+            <div class="class_price">
+                <span>R$ 15,00</span>
+            </div>
+        </div>
+            <i class='bx bx-cart card_cart'></i>
+        </div>
+
+        <div class="card">
+            <div class="card_img">
+                <img src="./img/black.jfif">
+            </div>
+            <div class="card_data">    
+                    <h3>THE BLACK</h3>
+                    <div class="card_desc">
+                        <small>Pão fofinho preminun totalmente <br> natural de carvão ativado, <br> carne industrial, maionese Heinz, <br> ovo, alface crispy e cebola <br> caramelizada.</small>
+                    </div>
+            <div class="class_price">
+                <span>R$ 16,00</span>
+            </div>
+        </div>
+            <i class='bx bx-cart card_cart'></i>
+        </div>
+
+        <div class="card">
+            <div class="card_img">
+                <img src="./img/anitta.jpg">
+            </div>
+            <div class="card_data">    
+                    <h3>ANITTA</h3>
+                    <div class="card_desc">
+                        <small>Carne industrial, molho especial <br> estilo Big Mac, alface tomate, <br> picles e no nosso pão fofinho</small>
+                    </div>
+            <div class="class_price">
+                <span>R$ 13,00</span>
+            </div>
+            </div>
+            <i class='bx bx-cart card_cart'></i>
+        </div>
+    </div>
+</section> -->
+
+
+    <!-- delivery -->
+    <section class="delivery" id="delivery">
+        <div class="delivery_container">
+            <div class="delivery_data">
+                <h1 class="section-title">Delívery</h1>
+                <h2 class="section-subtitle">Peça nossos combos e receba no conforto do seu lar</h2>
+                <a href="#" class="btn">FAÇA SEU PEDIDO</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- compartinhar -->
+    <section class="compartilhar">
+        <div class="compartilhar_container">
+            <h1 class="section-title">compartilhar</h1>
+            <p>#H-burguer</p>
+            <div class="compartilhar_social">
+                <i class="bx bxl-instagram insta"></i>
+                <a href="https://www.instagram.com/henriquesburguer/" target="blank">@henriques_burguer</a>
+            </div>
+        </div>
+
+    </section>
+
+</main>    
+
+<!-- footer -->
+<footer class="footer secton bg-container">
+    <div class="footer_container bd-container">
+        <div class="company">
+            <h3 class="logo">H-Burguer</h3>
+            <small>Redes Sociais</small>
+            <div class="social_media">
+               <a href="https://www.instagram.com/henriquesburguer/" target="blank"> <i class="bx bxl-instagram"></i></a>
+            </div>
+        </div>
+            <div class="address">
+                <h3 class="footer-title">Endereço</h3>
+                <small class="footer_subtitle">Remígio - Brasil</small>
+                <small class="footer_subtitle">fone</small>
+            </div>   
+    </div>
+    <p>@2021 padevoluper</p>
+</footer>
+
+
+    <script src="js/main.js"></script>
+    <!-- <script src="js/fire_base.js"></script> -->
+    <script src="js/cart.js"></script>
+</body>
+</html>
+<!-- https://www.youtube.com/watch?v=9S9xWDTCiBI -->
+<!-- https://www.youtube.com/watch?v=kJU6CZBGkEU -->

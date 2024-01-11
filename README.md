@@ -38,4 +38,3 @@ Este projeto é uma aplicação web simples para uma hambúrgueria, desenvolvida
 ## Licença
 
     MIT.
-
