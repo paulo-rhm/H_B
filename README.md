@@ -25,7 +25,7 @@ Este projeto é uma aplicação web simples para uma hambúrgueria, desenvolvida
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/seu-usuario/hamburgueria-tech.git
+   git clone https://github.com/paulo-rhm/H_B.git
 
 ## Autor
 
